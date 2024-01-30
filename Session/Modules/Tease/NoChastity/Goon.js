@@ -3,7 +3,7 @@
         runModuleCategory(CATEGORY_TEASE);
     } else if (tryRunModuleFetchId(2, MODULE.STROKING)) {
 
-        if (getVar(VARIABLE.ASS_WORSHIPS_DONE, 0) === 0) {
+        if (getVar(VARIABLE.GOONINGS_DONE, 0) === 0) {
             sendMessage('I came across something interesting the other day...');
             sendMessage('It\'s called "gooning"');
 
@@ -46,7 +46,13 @@
             sendMessage('Well here\'s what I\'ll do then..');
             smallPunishment(true, false);
             sendMessage('I think you see where I\'m going with this %Grin%');
-            sendMessage('Every smack brings you down a little bit further from that high');
+            let punishmentWord = 'minute'
+            if ((isInChastity() || !cbt && spanking) && PAIN_LIMIT.isAllowed()) {
+                punishmentWord = 'spank'
+            } else if (CBT_LIMIT.isAllowed()) {
+                punishmentWord = 'smack'
+            }
+            sendMessage('Every ' + punishmentWord +' brings you down a little bit further from that high');
             sendMessage('Until your senses are as sharp as ever...');
             sendMessage('And so is the ache %EmoteHappy%');
             sendMessage('So you\'re going to be doing a lot of gooning for me %SlaveName%');

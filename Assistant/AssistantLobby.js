@@ -24,6 +24,7 @@
 
         if (isFullTime()) {
             options.push('Academy');
+            options.push('Hygiene');
         }
 
         if (DEBUG_OPTIONS) {
@@ -62,7 +63,10 @@
                 run("Assistant/FreeTimeLobby.js");
                 sendVirtualAssistantMessage(getWelcomeMessage(), false);
                 break;
-            }  else if (lobbyAnswer.isLike("save", "end", "quit", "stop", "leave", "close", "finish")) {
+            } else if (lobbyAnswer.isLike("bathroom", "toilet", "shower", "hygene")) {
+                lobbyAnswer.clearOptions();
+                run("Hygiene/HygieneLobby.js");
+            } else if (lobbyAnswer.isLike("save", "end", "quit", "stop", "leave", "close", "finish")) {
                 sendVirtualAssistantMessage(random("Bye", "Until next time", "See you", "I'm waiting for the next time", "Don't leave me alone too long", "Good bye", "Have a nice day", "I saved your progress and you can close the program"));
                 lobbyAnswer.clearOptions();
                 endSession();

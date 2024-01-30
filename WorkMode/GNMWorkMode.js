@@ -388,9 +388,21 @@ function workmodeTease(tease) {
             sendVirtualAssistantMessage("Afterwards, you can return to whatever you were doing", 60);
             break;
         case 11:
-            sendVirtualAssistantMessage("Cocksucker I want you to go and grab your dildo.", 15);
-            sendVirtualAssistantMessage("I want you to deepthroat that %Cock% until I say stop");
-            sendVirtualAssistantMessage("Ok, get that thing in the back of your throat until I say you can take it out %Lol%", randomInteger(6, 20));
+            if(hasDildoToy()) {
+                sendVirtualAssistantMessage("Cocksucker I want you to go and grab your dildo.", 15);
+                sendVirtualAssistantMessage("I want you to deepthroat that cock until I say stop");
+               sendVirtualAssistantMessage("Ok, get that thing in the back of your throat until I say you can take it out %Lol%", randomInteger(6, 20));
+            } else {
+                sendVirtualAssistantMessage("Cocksucker, I want you to practice deepthroating.", 10)
+                sendVirtualAssistantMessage("You're going to deepthroat " + random(1, 4) + " fingers for me.")
+                sendVirtualAssistantMessage("Get them to the back of your throat until I say you can remove them %Lol%.", randomInteger(6, 20))
+            }
+            if (random(1, 10) == 10) {
+                sendVirtualAssistantMessage("That was fun...", 5);
+                sendVirtualAssistantMessage("I think you should do it again", 5);
+                sendVirtualAssistantMessage("I wanna see you gag until I tell you to stop %Slave%", randomInteger(6, 20));
+        
+            }
             sendVirtualAssistantMessage("Ok that's enough Cock gobbler.");
             sendVirtualAssistantMessage("Take a breath then return to whatever you were doing %Lol%", 10);
             break;

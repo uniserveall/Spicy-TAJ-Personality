@@ -14,7 +14,7 @@ function slaveNameVocabulary() {
     }
     //Do this after verbal humiliation to clear potential wrong answers in case of only sissy address
     if (SISSY_LIMIT.isAllowed()) {
-        adjectives.push('cock hungry', 'cock craving', 'cock sucking');
+        adjectives.push('cock hungry', 'cock craving', 'cock sucking', 'cock drunk');
 
         //Clear answers if we only address as sissy
         if(RULE_ONLY_SISSY_ADDRESS.isActive()) {
@@ -29,9 +29,18 @@ function slaveNameVocabulary() {
 
     if(CEI_LIMIT.isAllowed()) {
         if(isChance(50)) {
-            answers.push('cum consumer', 'cum lover', 'cum guzzler');
+            answers.push('cum consumer', 'cum lover', 'cum guzzler', 'cum slut', 'cum eater', 'cum whore', 'cum lover');
         } else {
-            adjectives.push('cum eating',  'cum sucking', 'cum craving');
+            adjectives.push('cum eating',  'cum sucking', 'cum craving', 'cum swallowing', 'cum drinking');
+        }
+    }
+
+    if(PEE_LIMIT.isAllowed()) {
+        let peeWord = random('piss', 'pee', 'urine')
+        if(isChance(50)) {
+            answers.push('toilet', 'urinal', peeWord+' drinker', peeWord+' lover', peeWord+' swallower', peeWord+' whore');
+        } else {
+            adjectives.push('wannabe toilet',  'wannabe urinal', peeWord+' drinking', peeWord+' swallowing', peeWord+' loving');
         }
     }
 
@@ -40,6 +49,9 @@ function slaveNameVocabulary() {
             answers.push("sissy cuckie", 'sissy cuckold');
         } else {
             answers.push("cuckie", 'cuckold');
+            if(CEI_LIMIT.isAllowed()) {
+                answers.push("cum eating cuckie", 'cum drinking cuckold');
+            }
         }
     }
 

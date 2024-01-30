@@ -424,6 +424,13 @@ const VARIABLE = {
     //End
     PREVIOUS_END_GAME_ID: 'previousEndGameId',
     ACTIVE_END_GAME_ID: 'activeEndGameId',
+
+    //Hygiene
+    HYGINENE_LAST_VISIT: 'hygieneLastVisit',
+    BATHROOM_LAST_VISIT: 'bathroomLastVisit',
+    BATHROOM_VISIT_COUNT: 'bathroomVisitCount',
+    SHOWER_LAST_VISIT: 'showerLastVisit',
+    SHOWER_VISIT_COUNT: 'showerVisitCount',
 };
 
 
